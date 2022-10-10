@@ -312,24 +312,19 @@ header nav div div ul .nav-link:hover {
 
 /*---seccion nosotros---*/
 
-.section-nosotros{
+.container{
     background-color: #6266a0;
 }
 
 .nosotros{
     background-color: #A6B1E1;
     color: #e6e0fd;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 50px 20px 20px 50px;
     font-weight: bold;
     text-align: justify;
 }
 
 
-.section-nosotros h1{
+.container h1{
     font-size: 35px;
     padding-top: 40px;
     color: #f1f1f1;
@@ -338,7 +333,7 @@ header nav div div ul .nav-link:hover {
 
 }
 
-.section-nosotros img{
+.container img{
     width: 250px;
     border-radius: 20px;
 }
