@@ -148,9 +148,8 @@ header nav div div ul .nav-link:hover {
 }
 
 .grid-cartas > div{
-    background-color: #6266a0;
-    color: #ffffff;
-    border: 5px solid #4b4242;
+    background-color: #ffffff;
+    color: #000000;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -352,7 +351,42 @@ header nav div div ul .nav-link:hover {
 
 .grid-productos{
     background-color: #A6B1E1;
+    gap: 10px;
+    padding: 10px;
     display: grid;
+    grid-template: 
+        "manga"
+        "comics"
+        "disney"
+        "otros";
+}
+
+@media (min-width: 900px){
+    .grid-productos{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.grid-productos > div{
+    background-color: #6266a0;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-productos a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.grid-productos a:hover{
+    transform: scale(1.5);
+    transition: 0.6s;
 }
 
 .section-productos h1{
@@ -363,24 +397,96 @@ header nav div div ul .nav-link:hover {
     text-align: center;
 }
 
+.manga{
+    background-image: url(../img/mangas.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
 
+.comics{
+    background-image: url(../img/marvel.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
+
+.disney{
+    background-image: url(../img/peterpan.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
+
+.otros{
+    background-image: url(../img/otros.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
 
 /*---seccion manga y anime---*/
 
+.section-manga{
+    background-color: #6266a0;
+    padding: 10px;
+}
+
+.section-manga h1{
+    font-size: 35px;
+    padding-top: 40px;
+    color: #f1f1f1;
+    font-weight: bold;
+    text-align: center;
+}
+
 .grid-container{
-    background-color: #89e9fa;
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .grid-container > div{
-    background-color: #6266a0;
-    border: 5px solid black;
-    height: 300px;
+    background-color: #ffffff;
+    height: 450px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.grid-container img{
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.grid-container img:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.grid-container a{
+    font-weight: bold;
+    font-size: 16px;
+    color: #fbfff6;
+    background-color: #21327e;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 40px;
+    border: #424874 solid 2px
+}
+
+.grid-container a:hover{
+    transition: 0.7s;
+    color: #e6e0fd;
+    background-color: #87e448;
+    border: #5ffc50 solid 2px
 }
